@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Django
+*.sqlite3
+db.sqlite3
+*.pyc
+.env
+.env.* 
+*.pot
+*.py~ 
+
+# Virtual Environment
+myenv/
+venv/
+ENV/
+env/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Git
+*.orig
+*.swp
+*.swo
+
+# React + Vite (assuming located in `web/ui` or similar)
+# You may need to adjust this if your UI folder is named differently
+/web/ui/node_modules/
+/web/ui/dist/
+/web/ui/.vite/
+/web/ui/.env
+/web/ui/.env.* 
+
+# npm/yarn lock files (optional)
+# You can choose to keep either of them depending on the package manager you use
+/web/ui/yarn.lock
+/web/ui/package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Other build artifacts
+*.tgz
+*.gz
+*.zip
+*.bak
+*.tmp
+*.tmp.*
