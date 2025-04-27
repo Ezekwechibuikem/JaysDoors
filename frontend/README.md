@@ -10,3 +10,41 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Frontend Project Tree Structure
+
+``` Project structure
+
+Jay/JaysDoors/frontend/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   ├── door1.jpg (placeholder image)
+│   │   └── door2.jpg (placeholder image)
+│   ├── components/
+│   │   ├── Card.jsx
+│   │   └── Navbar.jsx
+│   ├── pages/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Home.jsx
+│   │   └── Products.jsx
+│   ├── styles/
+│   │   ├── About.css
+│   │   ├── App.css
+│   │   ├── Card.css
+│   │   ├── Contact.css
+│   │   ├── Home.css
+│   │   ├── Navbar.css
+│   │   └── Products.css
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
