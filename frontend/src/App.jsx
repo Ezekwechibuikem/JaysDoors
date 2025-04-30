@@ -1,0 +1,48 @@
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import About from './pages/About'
+import Products from './pages/Products'
+import Contact from './pages/Contact'
+import './App.css'
+
+function App() {
+  const [message, setMessage] = useState('')
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/hello/')
+        const data = await response.json()
+        setMessage(data.message)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+        setMessage('Error connecting to API')
+      }
+    }
+    
+    fetchData()
+  }, [])
+
+  return (
+    <Router basename="/">
+      <div className="App">
+        <Navbar />
+        <div className="api-message">
+          <p>{message}</p>
+        </div>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  )
+}
+
+export default App

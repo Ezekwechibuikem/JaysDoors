@@ -1,0 +1,54 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    background-color: #75721d;
+    gap: 3rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #524f23;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #b69d49;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .featured-products {
+    padding: 1rem 0;
+  }
+  
+  .featured-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }

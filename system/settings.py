@@ -58,10 +58,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'system.urls'
 
+# CORS settings - during development, For development only, restrict in production
+CORS_ALLOW_ALL_ORIGINS = True 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / '../frontend/dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,6 +129,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Configure where Django will look for React's built files
+STATICFILES_DIRS = [
+    BASE_DIR / '../frontend/dist',  # Path to React build output
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

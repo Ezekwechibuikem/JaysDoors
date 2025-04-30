@@ -1,0 +1,33 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.api-message {
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+  color: #6c757d;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+}
